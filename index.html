@@ -1,0 +1,252 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Simona Rich - Be the Light of the World</title>
+
+		<link rel="stylesheet" type="text/css" href="css/opdesign.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body class="op-page">
+		<div class="container">
+			<div class="diary-canvas">
+				<div class="diary-border">
+					<div class="row">
+						<div class="grid-6 alignLeft">
+							<a href="http://www.simonarich.com/" target="_blank"><img src="images/logo.png" /></a>
+						</div>
+
+						<div class="grid-6 pos-LR">
+							<div class="comp-search floatRight">
+								<input type="text" placeholder="Search this website ..." />
+								<input type="button" value="Search" />
+							</div>
+						</div>
+
+						<div class="clearfix"></div>
+					</div><!-- 1 -->
+
+					<div class="row top-offset-2">
+						<div class="grid-12">
+							<nav class="comp-nav-diary">
+								<ul class="main-menu">
+									<li><div><a href="#">Home</a></div></li>
+									<li><div><a href="#">Blog</a></div></li>
+
+									<li>
+										<div><a href="#">Christ</a></div>
+										<ul class="sub-menu alignLeft">
+											<li><div>
+												<a href="#">Why You Should Only Read KJV Bible</a>
+											</div></li>
+
+											<li><div>
+												<a href="#">Preacher Dies and Appears Before God&apos;s Throne</a>
+											</div></li>
+
+											<li><div>
+												<a href="#">How I Received the Gift of the Holy Spirit</a>
+											</div></li>
+
+											<li><div>
+												<a href="#">About Different Types of Demons</a>
+											</div></li>
+
+											<li><div>
+												<a href="#">My Encounter With a Demonized Child</a>
+											</div></li>
+										</ul>
+									</li>
+
+									<li>
+										<div><a href="#">Earth</a></div>
+										<ul class="sub-menu alignLeft">
+											<li><div>
+												<a href="#">The Greatest Lie of Satan Ever Told</a>
+											</div></li>
+										</ul>
+									</li>
+
+									<li><div><a href="#">Evolution</a></div></li>
+
+									<li>
+										<div><a href="#">New Age</a></div>
+										<ul class="sub-menu alignLeft">
+											<li><div>
+												<a href="#">Reiki</a>
+											</div></li>
+
+											<li><div>
+												<a href="#">Yoga</a>
+											</div></li>
+
+											<li><div>
+												<a href="#">Hinduism</a>
+											</div></li>
+
+											<li><div>
+												<a href="#">Chakras</a>
+											</div></li>
+
+											<li><div>
+												<a href="#">About Third Eye and Third Chakra</a>
+											</div></li>
+										</ul>
+									</li>
+
+
+									<li><div><a href="#">About</a></div></li>
+									<li><div><a href="#">Support</a></div></li>
+									<li><div><a href="#">Contact</a></div></li>
+								</ul>
+
+								<div class="clearfix"></div>
+							</nav>
+						</div>
+					</div><!-- 2 -->
+
+					<div class="clearfix"></div>
+
+					<div class="row">
+						<div class="grid-8 LR-padding-offset-4 alignLeft">
+							<article class="post">
+								<h2 class="post-heading">
+									<a href="#">Replication Project #2</a>
+								</h2>
+
+								<div class="timestamp">
+									April 8, 2017 By 
+									<span class="author"><a href="#">Frankie Law</a></span>
+									<span class="comment"><a href="#">No Comments</a></span>
+								</div>
+
+								<p>
+									For my 2nd replication project, I used
+									<span><a href="http://www.simonarich.com/" target="_blank">simonarich.com</a></span> as template, because it is visually simple and there are many elements on this page that I never try to create before.
+								</p>
+
+								<p>
+									One of these element is the <b>dropdown menu</b>.  Not all the navigation tab have a sub-menu, only "Christ", "Earth" and "New Age" have them.  The biggest challenge in this replication was "Use only CSS child selectors" to dynamically make the sub-menu pop out.
+								</p>
+
+								<p>
+									The biggest problem I had was figuring out why the sub-menu doesn't appear in front.  The menu does appear on hover, but it was hidden within the container causing a scrollbar to appear on the right hand side.<br/><br/>
+
+									<img src="images/overflow-bad.jpg" />
+								</p>
+
+								<p>
+									But the problem didn't get stuck for long, after a few minutes of Googling I discovered that this is caused by the overflow property.  I was using the overflow property because the container div is collapsing due to floating elements that are inside. So I worked around it and found out that the better way to prevent collapsing div is to use clear property.
+								</p>
+
+								<p>
+									This is the first time that it actually made any sense how clear works.
+									And by the way, you can ignore the videos embedded here.  They are simply placeholder based on the template.
+								</p>
+
+								<iframe width="100%" height="350"
+									src="https://www.youtube.com/embed/wqsr5jIt0Bg">
+								</iframe>
+							</article>
+
+							<article class="post">
+								<h2 class="post-heading">
+									<a href="#">More Mistake</a>
+								</h2>
+
+								<div class="timestamp">
+									April 8, 2017 By
+									<span class="author"><a href="#">Frankie Law</a></span>
+									<span class="comment"><a href="#">No Comments</a></span>
+								</div>
+
+								<p>
+									The inital goal was to make this site responsive, it started out that way with the @media breakpoint in place.  But somewhere down the line, I got carried away making a full desktop size page.
+								</p>
+
+								<p>
+									After I have everything in place, I thought that it would easy to incorporate "responsivness" to what I already have.  WRONG!!!
+								</p>
+
+								<p>
+									Not only was it harder, I found that I didn't know a whole lot about responsiveness.  In my mind it kept running the if statements and it all made sense to me.  Little did I know that I can't just mix @media query with global css.  I had to backtrack into codepen to figure out how the browser interpret @media query and my "already written CSS".
+								</p>
+
+								<p>
+									It turns out that if I were to make this page a responsive one, I would have to start from the beginning and plan out how to construct a responsive CSS. 
+								</p>
+
+								<iframe width="100%" height="350"
+									src="https://www.youtube.com/embed/kfiMD5hbY2Y">
+								</iframe>
+							</article>
+						</div>
+
+						<div class="grid-4 T-padding-offset-5 L-padding-offset-4">
+							<div class="widget">
+								<div class="icon-size-3">
+									<i class="rss fa fa-rss"></i>
+									<i class="facebook fa fa-facebook-square"></i>
+									<i class="twitter fa fa-twitter-square"></i>
+									<i class="google-plus fa fa-google-plus-square"></i>
+									<i class="linkedin fa fa-linkedin-square"></i>
+								</div>
+							</div>
+
+							<div class="widget">
+								<h3>Receive New Posts &ndash; Your Information Will be Kept Private:</h3>
+								<div class="subscribe">
+									<div>
+										<input type="text" placeholder="Enter your email" />
+									</div>
+
+									<div>
+										<input type="button" value="Submit(opens in a new window)" />
+									</div>
+								</div>
+							</div>
+
+							<div class="widget ">
+								<h3>Category</h3>
+								<div class="category-list">
+									<ul class="alignLeft">
+										<li><a href="#">Bible Quiz</a> (2)</li>
+										<li><a href="#">Bible study</a> (10)</li>
+										<li><a href="#">Blog</a> (41)</li>
+										<li><a href="#">Demons</a> (12)</li>
+										<li><a href="#">Diary Entries</a> (11)</li>
+										<li><a href="#">Dreams</a> (2)</li>
+										<li><a href="#">Earth</a> (4)</li>
+										<li><a href="#">Educational</a> (31)</li>
+										<li><a href="#">Hinduism</a> (5)</li>
+										<li><a href="#">Meditation</a> (2)</li>
+										<li><a href="#">New Age</a> (5)</li>
+										<li><a href="#">Occult</a> (7)</li>
+										<li><a href="#">Psychology</a> (2)</li>
+										<li><a href="#">Psychopaths</a> (1)</li>
+										<li><a href="#">Relationship</a> (1)</li>
+										<li><a href="#">Saved by Grace</a> (2)</li>
+										<li><a href="#">Uncategorized</a> (7)</li>
+										<li><a href="#">Video</a> (39)</li>
+										<li><a href="#">Yoga</a> (2)</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="clearfix"></div>
+					</div><!-- 3 -->
+				</div>
+			</div><!-- Border Container -->
+		</div><!-- Page background -->
+
+		<div class="op-page">
+			<div class="container">
+				<div class="credit">
+					Replicated by <a href="http://cowwy.github.io/">Frankie Law</a> - Original Site from <a href="http://www.simonarich.com/">Simona Rich</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
